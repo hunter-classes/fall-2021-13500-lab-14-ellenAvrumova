@@ -3,7 +3,7 @@
 
 template <class T>
 MyVector<T>::MyVector() {
-    data = new int[10];
+    data = new T[10];
     vector_size = 0;
     vector_capacity = 10;
 }
@@ -26,8 +26,29 @@ bool MyVector<T>::empty() {
 
 template <class T>
 void MyVector<T>::push_back(T item) {
+    //make a new dynamic array
     data[vector_size] = item;
     vector_size++;
+}
+/*
+template <class T>
+void MyVector<T>::pop_back(int n) {
+    //delete the element at index n
+    if(n >= 0 && n < vector_size) {
+        vector_size--;
+    }
+}
+
+template <class T>
+void MyVector<T>::pop_back() {
+    if(n >= 0 && n < vector_size) {
+        vector_size--;
+    }
+}
+*/
+template <class T>
+void MyVector<T>::clear() {
+    vector_size = 0;
 }
 
 template <class T>
