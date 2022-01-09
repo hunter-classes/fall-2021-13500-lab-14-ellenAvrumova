@@ -18,4 +18,19 @@ int MyVector<T>::capacity() {
     return vector_capacity;
 }
 
+template <class T>
+bool MyVector<T>::empty() {
+    std::cout.setf(std::ios::boolalpha);
+    return vector_size == 0;
+}
 
+template <class T>
+void MyVector<T>::push_back(T item) {
+    data[vector_size] = item;
+    vector_size++;
+}
+
+template <class T>
+T &MyVector<T>::operator[](int n) {
+    return data[n];
+}
