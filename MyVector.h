@@ -1,10 +1,12 @@
 #pragma once
+
 template <class T>
 class MyVector {
     public:
-        int size(); //returns size of vector
+        MyVector();
+        int size(); //returns number of elements in vector
         int capacity(); //returns size of allocated storage capacity
-        bool empty(); //tests whether vector is empty (true if the container size is 0, false otherwise)
+        bool empty(); //tests whether vector is empty (true if size is 0, false otherwise)
         void push_back(T item); //adds element at the end
         void pop_back(int n); //deletes element at index n
         void pop_back(); //deletes last element
@@ -15,4 +17,5 @@ class MyVector {
         int vector_size;
         int vector_capacity;
 };
+
 #include "MyVector.cxx"
