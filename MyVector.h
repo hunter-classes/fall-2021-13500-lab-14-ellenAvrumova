@@ -3,7 +3,7 @@
 template <class T>
 class MyVector {
     public:
-        MyVector();
+        MyVector(); //vector constructor
         int size(); //returns number of elements in vector
         int capacity(); //returns size of allocated storage capacity
         bool empty(); //tests whether vector is empty (true if size is 0, false otherwise)
