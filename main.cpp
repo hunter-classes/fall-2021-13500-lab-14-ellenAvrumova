@@ -39,8 +39,7 @@ int main() {
     for(int i = 0; i < list.size(); i++) {
         std::cout << list[i] << ", "; //1.0 3.1
     }
-    */
-   
+   */
    std::cout << std::endl;
    list.clear();
    for(int i = 0; i < list.size(); i++) {

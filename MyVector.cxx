@@ -26,9 +26,21 @@ bool MyVector<T>::empty() {
 
 template <class T>
 void MyVector<T>::push_back(T item) {
-    //make a new dynamic array
-    data[vector_size] = item;
-    vector_size++;
+    if(vector_size < vector_capacity) {
+        data[vector_size] = item;
+        vector_size++;
+    }
+    else {
+        vector_capacity++;
+        T *temp = new T[vector_capacity];
+        for(int i = 0; i < vector_size; i++) {
+            temp[i] = data[i];
+        }
+        temp[vector_size] = item;
+        vector_size++;
+        data = temp;
+        delete[] temp;
+    }
 }
 /*
 template <class T>
