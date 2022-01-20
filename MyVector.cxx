@@ -42,22 +42,29 @@ void MyVector<T>::push_back(T item) {
         delete[] temp;
     }
 }
-/*
+
 template <class T>
 void MyVector<T>::pop_back(int n) {
-    //delete the element at index n
     if(n >= 0 && n < vector_size) {
         vector_size--;
+    }
+    else {
+        T *temp = new T[vector_capacity];
+        for(int i = 0; i < vector_size; i++) {
+            if(i != n) {
+                temp[i] = data[i];
+            }
+        }
+        data = temp;
+        delete[] temp;
     }
 }
 
 template <class T>
 void MyVector<T>::pop_back() {
-    if(n >= 0 && n < vector_size) {
-        vector_size--;
-    }
+    vector_size--;
 }
-*/
+
 template <class T>
 void MyVector<T>::clear() {
     vector_size = 0;
