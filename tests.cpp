@@ -59,12 +59,13 @@ TEST_CASE("Capacity") {
 TEST_CASE("Pop Back at index") {
     v1.pop_back(2);
     v1.pop_back(5);
-    v1.pop_back(11);
-    //{1.2, 2.3, 3.4, 4.5, 5.6, 6.7, 7.8, 8.9, 9.1, 10.1, 11.2, 12.3};
-    double arr[] = {1.2, 2.3, 4.5, 5.6, 7.8, 8.9, 9.1, 10.1, 11.2};
+    v1.pop_back(9);
+    double arr1[] = {1.2, 2.3, 4.5, 5.6, 6.7, 8.9, 9.1, 10.1, 11.2};
     for(int i = 0; i < v1.size(); i++) {
-        //std::cout << v1[i] << " ";
-        CHECK(v1[i] == arr[i]);
+        CHECK(v1[i] == arr1[i]);
     }
-    std::cout << std::endl;
+}
+
+TEST_CASE("Pop Back") {
+
 }
