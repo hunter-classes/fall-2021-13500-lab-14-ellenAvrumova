@@ -46,17 +46,17 @@ void MyVector<T>::push_back(T item) {
 template <class T>
 void MyVector<T>::pop_back(int n) {
     if(n >= 0 && n < vector_size) {
-        vector_size--;
-    }
-    else {
         T *temp = new T[vector_capacity];
+        int index = 0;
         for(int i = 0; i < vector_size; i++) {
             if(i != n) {
-                temp[i] = data[i];
+                temp[index] = data[i];
+                index++;
             }
         }
         data = temp;
         delete[] temp;
+        vector_size--;
     }
 }
 
