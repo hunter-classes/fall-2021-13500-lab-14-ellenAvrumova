@@ -64,6 +64,14 @@ TEST_CASE("Pop Back at index") {
     for(int i = 0; i < v1.size(); i++) {
         CHECK(v1[i] == arr1[i]);
     }
+
+    v2.pop_back(1);
+    v2.pop_back(3);
+    std::string arr2[] = {"H3llo,", "n@Me", "1S"};
+    for(int i = 0; i < v2.size(); i++) {
+        CHECK(v2[i] == arr2[i]);
+    }
+    std::cout << std::endl;
 }
 
 TEST_CASE("Pop Back") {
