@@ -38,8 +38,8 @@ void MyVector<T>::push_back(T item) {
         }
         temp[vector_size] = item;
         vector_size++;
+        delete[] data;
         data = temp;
-        delete[] temp;
     }
 }
 
@@ -54,8 +54,8 @@ void MyVector<T>::pop_back(int n) {
                 index++;
             }
         }
+        delete[] data;
         data = temp;
-        delete[] temp;
         vector_size--;
     }
 }
