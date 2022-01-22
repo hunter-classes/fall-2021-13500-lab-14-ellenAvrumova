@@ -92,3 +92,19 @@ TEST_CASE("Pop Back") {
     }
     CHECK(v2.empty() == true);
 }
+
+TEST_CASE("Clear") {
+    v1.clear();
+    CHECK(v1.empty() == true);
+
+    v2.push_back("New");
+    v2.push_back("Elements");
+    v2.push_back("Added");
+    std::string arr[] = {"New", "Elements", "Added"};
+    for(int i = 0; i < v2.size(); i++) {
+        CHECK(v2[i] == arr[i]);
+    }
+    
+    v2.clear();
+    CHECK(v2.empty() == true);
+}
