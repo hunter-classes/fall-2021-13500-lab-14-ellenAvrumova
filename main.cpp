@@ -1,3 +1,11 @@
+/**
+ * Author: Ellen Avrumova
+ * Course: CSCI-135
+ * Instructor: Mike Zamansky
+ * Assignment: Lab 14
+ * This is the main file that calls all the functions in MyVector.cxx
+*/
+
 #include <iostream>
 #include "MyVector.h"
 

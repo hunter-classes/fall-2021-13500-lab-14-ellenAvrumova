@@ -1,3 +1,12 @@
+/**
+ * Author: Ellen Avrumova
+ * Course: CSCI-135
+ * Instructor: Mike Zamansky
+ * Assignment: Lab 14
+ * This file contains all the functions in this lab. The functions are a vector constructor,
+ * size(), capacity(), empty(), push_back(), pop_back(int n), pop_back(), clear, and [].
+*/
+
 #include <iostream>
 #include "MyVector.h"
 

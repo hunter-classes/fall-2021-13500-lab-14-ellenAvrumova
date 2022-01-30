@@ -1,3 +1,11 @@
+/**
+ * Author: Ellen Avrumova
+ * Course: CSCI-135
+ * Instructor: Mike Zamansky
+ * Assignment: Lab 14
+ * This is the file that tests all the functions in MyVector.cxx
+*/
+
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include <string>
 #include "doctest.h"
@@ -82,7 +90,8 @@ TEST_CASE("Pop Back") {
     for(int i = 0; i < v1.size(); i++) {
         CHECK(v1[i] == arr1[i]);
     }
-
+    
+    CHECK(v2.empty() == false);
     for(int i = 0; i < 3; i++) {
         v2.pop_back();
     }

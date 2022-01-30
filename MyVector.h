@@ -1,3 +1,11 @@
+/**
+ * Author: Ellen Avrumova
+ * Course: CSCI-135
+ * Instructor: Mike Zamansky
+ * Assignment: Lab 14
+ * This is the file that contatins all the prototypes for the functions in MyVector.cxx
+*/
+
 #pragma once
 
 template <class T>
